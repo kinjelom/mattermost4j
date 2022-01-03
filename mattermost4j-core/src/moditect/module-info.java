@@ -15,9 +15,6 @@
  */
 
 module net.bis5.mattermost4j.core {
-    requires jersey.client;
-    requires jersey.common;
-    requires jersey.media.json.jackson;
     requires org.apache.commons.lang3;
 
     requires transitive com.fasterxml.jackson.annotation;
@@ -25,7 +22,6 @@ module net.bis5.mattermost4j.core {
     requires transitive jakarta.ws.rs;
     requires transitive java.logging;
     requires transitive java.sql;
-    requires transitive jersey.media.multipart;
     requires transitive net.bis5.mattermost4j.models;
     requires transitive opengraph4j;
 
@@ -33,6 +29,7 @@ module net.bis5.mattermost4j.core {
     exports net.bis5.mattermost.client4.api;
     exports net.bis5.mattermost.client4.hook;
     exports net.bis5.mattermost.client4.model;
-    exports net.bis5.mattermost.jersey.provider;
+    exports net.bis5.mattermost.client4.spi;
+    exports net.bis5.mattermost.provider;
 
 }
